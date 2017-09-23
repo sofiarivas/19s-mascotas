@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="link-container">
-    <!-- <nuxt-link to="/search" class="button link-item">Buscar mascota</nuxt-link> -->
-    <nuxt-link to="/search" class="button is-info link-item">Publicar mascota rescatada</nuxt-link>
+    <nuxt-link v-if="$route.fullPath !== '/'" nuxt-link to="/" class="button link-item">Buscar mascota</nuxt-link>
+    <nuxt-link to="/publish" class="button is-info link-item">Publicar mascota rescatada</nuxt-link>
     </div>
     <nuxt/>
   </div>
