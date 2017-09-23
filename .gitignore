@@ -9,3 +9,11 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# Env configuration
+.env
+
+#Firebase
+serviceAccountKey.json
+
+.DS_Store
