@@ -10,10 +10,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Busca y publica información de mascotas extraviadas después del sismo' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
+      { rel: 'dns-prefetch', href: 'https://busco-a-mi-mascota.firebaseio.com' }
     ]
   },
   css: [
@@ -49,5 +48,7 @@ module.exports = {
       }
     }
   },
-  plugins: ['~plugins/vue-instantsearch']
+  plugins: [
+  '~plugins/vue-instantsearch',
+  '~plugins/firebase']
 }
