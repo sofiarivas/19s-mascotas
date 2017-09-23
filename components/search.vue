@@ -16,20 +16,35 @@
         </span> -->
       </div>
     </ais-search-box>
-    <ais-results>
+    <ais-results class="columns is-multiline is-desktop is-1">
       <template scope="{ result }">
-        <h2>{{ result.details.title }}</h2>
+        <div class="column is-one-third-desktop card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">{{ result.details.title }}</p>
+                <p class="subtitle">Reportador por: {{ result.details.username }}</p>
+              </div>
+            </div>
+            <div class="content" > {{ result.details.description }}
+              <br><br>
+              <time datetime="2016-1-1">{{ result.details.date }}</time>
+            </div>
+          </div>
+        </div>
       </template>
     </ais-results>
   </ais-index>
 </template>
 
 <style scoped>
-
-  .search-box {
-    text-align: left;
-    padding: 0 0 10px 30px;
-    color: #5BB786;
+  .ais-results {
+    margin-top: 15px;
   }
 
   input {
@@ -39,8 +54,18 @@
     border-radius: 20px;
   }
 
+  .search-box {
+    text-align: left;
+    padding: 0 0 10px 30px;
+    color: #5BB786;
+  }
+
   .submit-button {
     width: 120px;
     border-radius: 20px;
+  }
+
+  .content {
+    text-align: left;
   }
 </style>
