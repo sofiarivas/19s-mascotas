@@ -31,6 +31,13 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "firebase": "^4.3.1"
+    "firebase": "^4.3.1",
+    "git-scripts": "^0.2.1",
+    "surge": "^0.19.0"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project dist/ --domain buscoamimascota.surge.sh"
+    }
   }
 }
