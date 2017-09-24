@@ -122,6 +122,7 @@
 <script>
 import firebase from 'firebase'
 export default {
+  name: 'publishForm',
   asyncData (params) {
     return {
       file_name: 'foto_perrito.jpg',
@@ -149,6 +150,7 @@ export default {
     },
     saveData (evt) {
       const fileInput = document.querySelector('#pet_photo')
+      this.isLoading = true
       if (fileInput.files.length > 0) {
         // upload the file and then save data
         this.uploadFile(fileInput.files[0])
@@ -175,12 +177,12 @@ export default {
           pet_color: this.petColor && this.petColor.toLowerCase().trim()
         }
       }
-      const mFields = ['title', 'petDescription', 'contactPhone', 'contactName']
+      const mFields = ['title', 'petDescription', 'contactPhone', 'contactName', 'foundDate']
       this.errors = ''
       for (const field of mFields) {
         if (!this[field]) {
           console.log('Errors!!!!')
-          this.errors = 'Por favor llena por lo menos los campos Título, Descripción de la mascota perdida, Nombre de responsable actual y Teléfono de contacto.'
+          this.errors = 'Por favor llena por lo menos los campos Título, Descripción de la mascota perdida, Nombre de responsable actual, Teléfono de contacto y Fecha'
           return
         }
       }
