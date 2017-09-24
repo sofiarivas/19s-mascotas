@@ -28,7 +28,7 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <nuxt-link :to="'/reports/'+result.objectID" class="title">{{ result.title }}</nuxt-link>
+                <nuxt-link :to="'/reports?reportId='+result.objectID" class="title">{{ result.title }}</nuxt-link>
                 <p class="subtitle">Responsable actual: {{ result.contact_name }}</p>
               </div>
             </div>
