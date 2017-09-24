@@ -21,7 +21,8 @@
         <div class="column is-one-third-desktop card">
           <div class="card-image">
             <figure class="image">
-              <img :src="result.photo_url" alt="Placeholder image">
+              <img v-if="result.photo_url" :src="result.photo_url" >
+              <img v-else src="~/static/placeholder.png" alt="No contamos con imagen" >
             </figure>
           </div>
           <div class="card-content">
@@ -31,7 +32,8 @@
                 <p class="subtitle">Responsable actual: {{ result.contact_name }}</p>
               </div>
             </div>
-            <div class="content" > {{ result.description }}
+            <div class="content">
+              <div class="description">{{ result.description }}</div>
               <br><div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
               {{ detail }}</span></div>
               <br><br>
@@ -46,7 +48,7 @@
 
 <style scoped>
   .ais-results {
-    margin-top: 15px;
+    margin: 15px;
   }
 
   input {
@@ -69,5 +71,9 @@
 
   .content {
     text-align: left;
+  }
+
+  .description {
+    margin-bottom: 10px;
   }
 </style>
