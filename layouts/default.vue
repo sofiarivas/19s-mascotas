@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="$route.fullPath !== '/'" class="logo-container">
-        <img class="logo is-small" src="~/static/logo.png"/>
+        <a href="/"><img class="logo is-small" src="~/static/logo.png"/></a>
     </div>
     <div class="top-container">
       <div class="link-container">
