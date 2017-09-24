@@ -81,4 +81,14 @@
   .description {
     margin-bottom: 10px;
   }
+  .card-image {
+    height: 310px;
+    overflow: hidden;
+  }
+  .card-image figure, .card-image img {
+    height: 100%;
+    max-width: none !important;
+    width: auto;
+    margin: 0 auto;
+  }
 </style>
