@@ -1,30 +1,55 @@
 <template>
   <div>
     <div v-if="$route.fullPath !== '/'" class="logo-container">
-      <img class="logo is-small" src="logo.png"/>
+        <img class="logo is-small" src="~/static/logo.png"/>
     </div>
-    <div class="link-container">
-      <nuxt-link v-if="$route.fullPath !== '/'" nuxt-link to="/" class="button link-item">Buscar mascota</nuxt-link>
-      <nuxt-link to="/publish" class="button is-info link-item">Publicar mascota rescatada</nuxt-link>
+    <div class="top-container">
+      <div class="link-container">
+        <nuxt-link v-if="$route.fullPath !== '/'" nuxt-link to="/" class="button link-item">Buscar mascota</nuxt-link>
+        <nuxt-link to="/publish" class="button is-info link-item">Publicar mascota rescatada</nuxt-link>
+      </div>
     </div>
   <nuxt/>
+<!--   <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          CONTACTO: busco_mascota_contacto@gmail.com
+          <a class="icon" href="https://github.com/sofiarivas/19s-mascotas">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer> -->
   </div>
 </template>
 
 <style scoped>
-  .link-contaner, .logo-container {
-    display: inline-block;
+  .top-container {
+    text-align: right;
+  }
+  .link-container, .logo-container {
+      display: inline-flex;
+  }
+  .logo-container {
+    margin: 10px;
   }
   .link-container {
-    text-align: right;
-    margin: 30px;
-    float: right;
+    /*float: right;*/
+    margin: 10px;
   }
   .link-item {
-    margin-left: 10px;
+    margin: 5px;
   }
   .logo {
     margin: 1em;
-    width: 200px;
+  }
+  .footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .icon {
+    font-size: 22px;
   }
 </style>

@@ -38,17 +38,19 @@ export default {
 .title {
   display: block;
   font-weight: 300;
-  font-size: 35px;
+  font-size: 25px;
   color: #9B9B9B;
-  letter-spacing: 1px;
   margin-top: 30px;
+}
+
+.title:hover {
+  color: #5bb786;
 }
 
 .subtitle {
   font-weight: 500;
   font-size: 16px;
   color: #4A4A4A;
-  word-spacing: 5px;
   padding-bottom: 15px;
 }
 

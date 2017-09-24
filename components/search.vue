@@ -1,6 +1,6 @@
 <template>
 
-  <ais-index app-id="VUPR3RSXRE" api-key="9b7b9defa421ae1ee8b39d8ba9b3f119" index-name="reports" :auto-search="false">
+  <ais-index app-id="VUPR3RSXRE" api-key="9b7b9defa421ae1ee8b39d8ba9b3f119" index-name="reports" :auto-search="true">
     <ais-search-box>
       <div>
         <h2 class="search-box">Busca información de mascotas rescatadas:</h2>
@@ -43,6 +43,11 @@
         </div>
       </template>
     </ais-results>
+    <ais-no-results>
+       <template scope="{ result }">
+        No encontramos resultados.
+       </template>
+    </ais-no-results>
   </ais-index>
 </template>
 
