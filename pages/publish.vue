@@ -188,7 +188,7 @@ export default {
       let key = firebase.database().ref().child('reports').push().key
       let updates = {}
       updates[key] = data
-      firebase.database().ref('/reports').update(updates)
+      firebase.database().ref('/reports').update(updates).then(() => this.$router.replace({ path: '/thank-you' }))
     },
     uploadFile (file) {
       var storageRef = firebase.storage().ref()
