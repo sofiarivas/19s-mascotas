@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div>
+  <section >
+    <div class="container is-fluid">
       <logo/>
       <h1 class="title">
         ¡Ayudemos a cada mascota a regresar a su hogar!
@@ -28,34 +28,30 @@ export default {
 </script>
 
 <style>
-.container {
-  top-margin: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .container {
+    text-align: center;
+  }
 
-.title {
-  display: block;
-  font-weight: 300;
-  font-size: 25px;
-  color: #9B9B9B;
-  margin-top: 30px;
-}
+  .title {
+    display: block;
+    font-weight: 300;
+    font-size: 25px;
+    color: #9B9B9B;
+    margin-top: 30px;
+  }
 
-.title:hover {
-  color: #5bb786;
-}
+  .title:hover {
+    color: #5bb786;
+  }
 
-.subtitle {
-  font-weight: 500;
-  font-size: 16px;
-  color: #4A4A4A;
-  padding-bottom: 15px;
-}
+  .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    color: #4A4A4A;
+    padding-bottom: 15px;
+  }
 
-.links {
-  padding-top: 15px;
-}
+  .links {
+    padding-top: 15px;
+  }
 </style>
