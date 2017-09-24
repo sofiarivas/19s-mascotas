@@ -12,7 +12,8 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'dns-prefetch', href: 'https://busco-a-mi-mascota.firebaseio.com' }
+      { rel: 'dns-prefetch', href: 'https://busco-a-mi-mascota.firebaseio.com' },
+      { rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}
     ]
   },
   css: [
@@ -37,6 +38,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['vue-instantsearch', 'firebase'],
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
