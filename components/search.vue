@@ -21,19 +21,21 @@
         <div class="column is-one-third-desktop card">
           <div class="card-image">
             <figure class="image">
-              <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              <img :src="result.photo_url" alt="Placeholder image">
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title">{{ result.details.title }}</p>
-                <p class="subtitle">Reportador por: {{ result.details.username }}</p>
+                <nuxt-link :to="'/reports/'+result.objectID" class="title">{{ result.title }}</nuxt-link>
+                <p class="subtitle">Responsable actual: {{ result.contact_name }}</p>
               </div>
             </div>
-            <div class="content" > {{ result.details.description }}
+            <div class="content" > {{ result.description }}
+              <br><div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
+              {{ detail }}</span></div>
               <br><br>
-              <time datetime="2016-1-1">{{ result.details.date }}</time>
+              <time datetime="2016-1-1">Fecha de rescate: {{ result.date }}</time>
             </div>
           </div>
         </div>
