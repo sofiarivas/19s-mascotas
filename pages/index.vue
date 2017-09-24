@@ -19,6 +19,7 @@
 import Logo from '~/components/Logo.vue'
 import Search from '~/components/Search.vue'
 export default {
+  name: 'searchSection',
   components: {
     Logo,
     Search
