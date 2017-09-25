@@ -51,6 +51,7 @@ import firebase from 'firebase'
 export default {
   name: 'detailView',
   async asyncData (context) {
+    console.log('Repoooorts')
     let data = await firebase.database().ref(`/reports/${context.route.query.reportId}`).once('value')
     return { details: data.val() }
   }
