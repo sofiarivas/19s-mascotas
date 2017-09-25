@@ -1,9 +1,10 @@
 module.exports = {
+  mode: 'spa',
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Sismo CDMX - busco a mi mascota',
+    title: 'Sismo CDMX - Busco a mi mascota',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

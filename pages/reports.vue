@@ -51,6 +51,7 @@ import firebase from 'firebase'
 export default {
   name: 'detailView',
   asyncData (context) {
+    console.log(context.route)
     if (!context.route.query.reportId) {
       return {
         details: {
@@ -59,7 +60,6 @@ export default {
       }
     }
     let result = firebase.database().ref(`/reports/${context.route.query.reportId}`).once('value').then((res) => {
-      console.log('Finial')
       let data = res.val()
       console.log(data)
       return { details: data }
