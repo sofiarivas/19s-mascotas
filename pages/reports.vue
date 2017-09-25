@@ -50,10 +50,15 @@ import firebase from 'firebase'
 
 export default {
   name: 'detailView',
-  async asyncData (context) {
-    console.log('Repoooorts')
-    let data = await firebase.database().ref(`/reports/${context.route.query.reportId}`).once('value')
-    return { details: data.val() }
+  asyncData (context) {
+    console.log('Trying report: ' + context.route.query.reportId)
+    let result = firebase.database().ref(`/reports/${context.route.query.reportId}`).once('value').then((res) => {
+      console.log('Finial')
+      let data = res.val()
+      console.log(data)
+      return { details: data }
+    })
+    return result
   }
 }
 </script>
