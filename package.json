@@ -37,7 +37,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project dist/ --domain buscoamimascota.surge.sh"
+      "pre-push": "surge --project dist/ --domain buscoamimascota.sh"
     }
   }
 }
