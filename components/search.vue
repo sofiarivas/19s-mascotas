@@ -36,7 +36,6 @@
               <div class="description">{{ result.description }}</div>
               <br><div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
               {{ detail }}</span></div>
-              <br><br>
               <time datetime="2016-1-1">Fecha de rescate: {{ result.date }}</time>
             </div>
           </div>
@@ -52,6 +51,25 @@
 </template>
 
 <style scoped>
+  .title {
+    display: block;
+    font-weight: 300;
+    font-size: 25px;
+    color: #9B9B9B;
+    margin-top: 30px;
+  }
+
+  .title:hover {
+    color: #5bb786;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    color: #4A4A4A;
+    padding-bottom: 15px;
+  }
+
   .ais-results {
     margin: 15px;
   }
