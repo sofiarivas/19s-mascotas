@@ -37,6 +37,7 @@
               <br><div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
               {{ detail }}</span></div>
               <time datetime="2016-1-1">Fecha de rescate: {{ result.date }}</time>
+              <div class="estado">Estado: {{result.state || "Sin entregar" }}</div>
             </div>
           </div>
         </div>

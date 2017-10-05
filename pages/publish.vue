@@ -1,6 +1,6 @@
 <template>
   <div class="publish-form-container">
-    <h1 class="is-size-1">Registrar mascota rescatada</h1>
+    <h1 class="is-size-1">Registrar mascota perdida/rescatada</h1>
     <div class="columns">
       <form class="column is-half">
         <legend> Introduce los datos de la mascota que encontraste, lo más completos posible.</legend>
@@ -9,6 +9,18 @@
           <label class="label">Título de la publicación</label>
           <div class="control">
             <input class="input" type="text" placeholder="Ej. Labrador Negro cerca de Amstedam" v-model="title">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Busco/Encontré</label>
+          <div class="control">
+            <div class="select is-info">
+              <select v-model="petType">
+                <option value="perro"> Perro </option>
+                <option value="gato"> Gato </option>
+                <option value="Otro"> Otro </option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="field">
