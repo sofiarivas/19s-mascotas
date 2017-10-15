@@ -16,9 +16,11 @@
         </span> -->
       </div>
     </ais-search-box>
-    <ais-results class="columns is-multiline is-desktop is-1">
+    <ais-results class="columns is-multiline is-desktop">
       <template scope="{ result }">
-        <div class="column is-one-third-desktop card">
+        <div class="column is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd">
+          <div class="card">
+          <nuxt-link :to="'/reports/?reportId='+result.objectID">
           <div class="card-image">
             <figure class="image">
               <img v-if="result.photo_url" :src="result.photo_url" >
@@ -29,17 +31,19 @@
             <div class="media">
               <div class="media-content">
                 <nuxt-link :to="'/reports/?reportId='+result.objectID" class="title">{{ result.title }}</nuxt-link>
-                <p class="subtitle">Responsable actual: {{ result.contact_name }}</p>
+                <!-- <p class="subtitle">Responsable actual: {{ result.contact_name }}</p> -->
               </div>
             </div>
             <div class="content">
               <div class="description">{{ result.description }}</div>
-              <br><div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
+              <div class="tags"><span v-for="detail in result.pet_details" class="tag is-light">
               {{ detail }}</span></div>
-              <time datetime="2016-1-1">Fecha de rescate: {{ result.date }}</time>
-              <div class="estado">Estado: {{result.state || "Sin entregar" }}</div>
+              <time datetime="2016-1-1">Fecha de rescate: {{ result.date }}</time><br>
+              <span class="subtitle">Estado: </span><span>{{result.state || "Sin entregar" }}</span>
             </div>
           </div>
+        </nuxt-link>
+        </div>
         </div>
       </template>
     </ais-results>
@@ -52,23 +56,35 @@
 </template>
 
 <style scoped>
+  a {
+    color: #4a4a4a;
+  }
+
+  .column {
+    height: 630px;
+  }
+
+  .card {
+    height: 100%;
+  }
+
   .title {
     display: block;
-    font-weight: 300;
-    font-size: 25px;
-    color: #9B9B9B;
-    margin-top: 30px;
+    font-weight: 500;
+    font-size: 22px;
+    color: #5bb786;
+    margin-top: 15px;
   }
 
   .title:hover {
-    color: #5bb786;
+    color: #4A4A4A;
   }
 
   .subtitle {
     font-weight: 500;
     font-size: 16px;
     color: #4A4A4A;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
   }
 
   .ais-results {
@@ -98,7 +114,8 @@
   }
 
   .description {
-    margin-bottom: 10px;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
   }
   .card-image {
     height: 310px;
